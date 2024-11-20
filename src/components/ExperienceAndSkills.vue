@@ -65,23 +65,18 @@ const Skills =ref([
     },
     {
         id:4,
-        name:'figma',
-        width:'91%'
+        name:'Php',
+        width:'70%'
     },
 ]);
 
 const Experinces =ref([
+    
     {
         id:1,
-        role:'Software Engineer',
-        company:'Microsoft',
-        date:'Mar 2023 - September 2024'
-    },
-    {
-        id:2,
-        role:'Frontend Developer',
-        company:'Spotify',
-        date:'Mar 2022 - September 2023'
+        role:'Full Stack Developer',
+        company:'Lao - Viet Bank',
+        date:'Oc - 2024'
     },
 ])
 </script>
