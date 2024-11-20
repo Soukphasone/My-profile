@@ -48,15 +48,13 @@
           >
           Me
         </h2>
-        <p class="text-base lg:text-lg mt-8 py-8 text-justify lg:text-left">
-          Hello, my name is
-          <br />
-          Mr DOUANGPANYA SOUKPHASONE. I'm 23 Years old, i'm from Bolikhamay
-          province in Laos. I’m a developer with a strong interest in front-end
-          frameworks like React and Vue, and I also enjoy working with back-end
-          technologies like Node.js and TypeScript. Recently, I’ve been focused
-          on building secure APIs and integrating databases, like Oracle and
-          Mongodb, into scalable applications.
+        <p class="text-base lg:text-lg mt-8 py-8 text-center">
+          Hello, my name is Mr DOUANGPANYA SOUKPHASONE. I'm 23 Years old, i'm
+          from Bolikhamay province in Laos. I’m a developer with a strong
+          interest in front-end frameworks like React and Vue, and I also enjoy
+          working with back-end technologies like Node.js and TypeScript.
+          Recently, I’ve been focused on building secure APIs and integrating
+          databases, like Oracle and Mongodb, into scalable applications.
         </p>
         <!-- <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
                     <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">
