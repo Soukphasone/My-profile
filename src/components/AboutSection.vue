@@ -50,8 +50,8 @@
         </h2>
         <p class="font-lao text-base lg:text-lg mt-8 py-8">
           ສະບາຍດີ ຂ້າພະເຈົ້າ ທ.ສຸກພະສອນ ດວງປັນຍາ. ອາຍຸ 24 ປິ, ຮັບພັດທະນາ
-          program, website-application ... ປັດຈຸບັນ ເຮັດວຽກຢູ່
-          ທະນາຄານຮ່ວມທຸລະກິດລາວ-ຫວຽດ (Lao-Viet Bank) ທີ່ ສຳນັກງານໃຫຍ່ ນະຄອນຫຼວງວຽງຈັນ
+          program, website-application ຕ່າງໆ. ປັດຈຸບັນ ເຮັດວຽກຢູ່
+          ທະນາຄານຮ່ວມທຸລະກິດ ລາວ-ຫວຽດ (Lao-Viet Bank) ທີ່ ສຳນັກງານໃຫຍ່ ນະຄອນຫຼວງວຽງຈັນ.
         </p>
         <!-- <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
                     <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">

@@ -50,7 +50,7 @@
                 <div class="mb-6">
                     <label for="email" class="text-white block mb-2 text-sm font-medium">ອີເມວ</label>
                     <input type="email" id="email" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="email@gmail.com" name="email">
+                    placeholder="ຕົວຢ່າງ email@gmail.com" name="email">
                 </div>
                 <div class="mb-6">
                     <label for="subject" class="text-white block mb-2 text-sm font-medium">ເລື່ອງ</label>
