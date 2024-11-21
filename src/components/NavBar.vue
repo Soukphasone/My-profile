@@ -2,8 +2,20 @@
   <header
     class="flex justify-between items-center p-6 bg-opacity-50 relative z-20"
   >
-    <div class="text-white text-3xl font-bold">
-      <img src="@/assets/laos-flag.png" alt="LOGO" class="inline-block w-15 h-10" />
+    <div class="font-lao text-3xl font-bold">
+      <div class="p-4 max-w-sm mx-auto">
+          <select
+            id="language"
+            v-model="currentLanguage"
+            @change="changeLanguage"
+            class="border rounded p-2 text-sm"
+          >
+            <option value="en" class="flex items-center">EN</option>
+            <option value="la" class="flex items-center">LA</option>
+          </select>
+      </div>
+
+      <!-- <img src="@/assets/laos-flag.png" alt="LOGO" class="inline-block w-15 h-10" /> -->
     </div>
 
     <!-- Mobile Toggle Button -->
@@ -55,7 +67,9 @@
   </header>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { useI18n } from "vue-i18n";
+import { currentLanguage } from "../i18n";
 const Menu = ref([
   // { name: "Services", href: "#services" },
   { name: "ກ່ຽວກັບຂ້ອຍ", href: "#about" },
@@ -72,5 +86,17 @@ const scrollToSection = (href) => {
   if (section) {
     section.scrollIntoView({ behavior: "smooth" });
   }
+};
+// Handle language switching
+const { locale } = useI18n();
+
+// Watch for changes in the global language state and update the i18n locale
+watch(currentLanguage, (newLanguage) => {
+  locale.value = newLanguage;
+});
+
+// Function to persist the selected language in localStorage
+const changeLanguage = () => {
+  localStorage.setItem("language", currentLanguage.value);
 };
 </script>

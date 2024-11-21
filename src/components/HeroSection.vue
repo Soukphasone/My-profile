@@ -19,12 +19,12 @@
             <h1
               class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl"
             >
-              ສະບາຍດີ ຂ້ອຍ
+             {{ $t("hello") }}
               <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-500"
               >
                 <br />
-                BO SOUKPHASONE
+                BO SOUKPHASONE 
               </span>
               <!-- 😁 -->
             </h1>
