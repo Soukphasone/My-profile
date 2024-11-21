@@ -44,7 +44,7 @@
         <li v-for="item in Menu" :key="item.name">
           <a
             :href="item.href"
-            class="block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
+            class="font-lao block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
             @click="scrollToSection(item.href)"
           >
             {{ item.name }}
@@ -57,12 +57,12 @@
 <script setup>
 import { ref } from "vue";
 const Menu = ref([
-  { name: "Services", href: "#services" },
-  { name: "About Me", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
+  // { name: "Services", href: "#services" },
+  { name: "ກ່ຽວກັບຂ້ອຍ", href: "#about" },
+  { name: "ທັກສະ", href: "#skills" },
+  // { name: "Projects", href: "#projects" },
+  // { name: "Testimonials", href: "#testimonials" },
+  { name: "ຕິດຕໍ່", href: "#contact" },
 ]);
 
 const isMenuOpen = ref(false);

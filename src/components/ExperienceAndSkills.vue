@@ -8,8 +8,8 @@
         </div>
         <div class="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 xl:px-16">
             <div class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full w-[80%]">
-                <h2 class="text-4xl font-bold text-white text-left mb-4">My 
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Skills</span>
+                <h2 class="font-lao text-4xl font-bold text-white text-left mb-4">ທັກສະການຂຽນ<br>
+                    <span class="font-lao text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">ໂປຣແກຣມ</span>
                 </h2>
                 <div class="mt-8" v-for="skill in Skills" :key="skill.id">
                     <div class="flex items-end justify-between" data-aos="fade-right">
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div data-aos="flip-left">
-                <h2 class="text-4xl font-bold text-white text-left mb-8 md:text-center md:mt-0 mt-8">My Experiences</h2>
+                <h2 class="font-lao text-4xl font-bold text-white text-left mb-8 md:text-center md:mt-0 mt-8">ປະສົບການເຮັດວຽກ</h2>
                 <div class="space-y-8 py-8" data-aos="fade-left">
                     <div v-for="element in Experinces" :key="element.id"
                     class="flex  items-center rounded-xl p-4 bg-[#111a3e] shadow-lg border border-[#1f1641]"

@@ -9,8 +9,8 @@
       class="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 z-1"
     >
       <div data-aos="flip-right">
-        <h2 class="text-4xl font-bold text-white text-left mb-8">
-          My Education
+        <h2 class="font-lao text-4xl font-bold text-white text-left mb-8">
+          ການສຶກສາ
         </h2>
         <div class="space-y-8 py-8">
           <div
@@ -24,7 +24,7 @@
                 alt="graduation-cap--v1"
               />
             </div>
-            <div class="w-3/4 pl-4">
+            <div class="w-3/4 pl-4 font-lao">
               <h3
                 class="text-2xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:text-xl"
               >
@@ -37,24 +37,21 @@
         </div>
       </div>
       <div
-        class="mt-4 md:mt-0 text-left flex flex-col z-10 h-full"
+        class="font-lao mt-4 md:mt-0 text-left flex flex-col z-10 h-full"
         data-aos="flip-right"
       >
         <h2 class="text-4xl font-bold text-white md:text-center text-left mb-4">
-          More
+          ເພີ່ມເຕີມ
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
-            >About</span
+            >ກ່ຽວກັບ</span
           >
-          Me
+          ຂ້ອຍ
         </h2>
-        <p class="text-base lg:text-lg mt-8 py-8 text-center">
-          Hello, my name is Mr DOUANGPANYA SOUKPHASONE. I'm 23 Years old, i'm
-          from Bolikhamay province in Laos. I’m a developer with a strong
-          interest in front-end frameworks like React and Vue, and I also enjoy
-          working with back-end technologies like Node.js and TypeScript.
-          Recently, I’ve been focused on building secure APIs and integrating
-          databases, like Oracle and Mongodb, into scalable applications.
+        <p class="font-lao text-base lg:text-lg mt-8 py-8">
+          ສະບາຍດີ ຂ້າພະເຈົ້າ ທ.ສຸກພະສອນ ດວງປັນຍາ. ອາຍຸ 24 ປິ, ຮັບພັດທະນາ
+          program, website-application ... ປັດຈຸບັນ ເຮັດວຽກຢູ່
+          ທະນາຄານຮ່ວມທຸລະກິດລາວ-ຫວຽດ (Lao-Viet Bank) ທີ່ ສຳນັກງານໃຫຍ່ ນະຄອນຫຼວງວຽງຈັນ
         </p>
         <!-- <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
                     <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">
@@ -80,8 +77,8 @@ import { ref } from "vue";
 const education = ref([
   {
     id: 1,
-    School: "hatin usniversity in vietnam",
-    program: "Software Engineer",
+    School: "ຈົບການສຶກສາຈາກ ມະຫາວິທະຍາໄລ ຮ່າຕິ່ງ ສສ ຫວຽດນາມ",
+    program: "ສາຂາ ເຕັກໂນໂລຊີຂໍ້ມູນຂ່າວສານ",
     year: "2024",
   },
   // {
