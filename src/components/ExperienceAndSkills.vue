@@ -74,9 +74,15 @@ const Experinces =ref([
     
     {
         id:1,
+        role:'Internship',
+        company:'LaiLaoLab ICT Solution',
+        date:'2023 - 2024'
+    },
+    {
+        id:2,
         role:'Full Stack Developer',
         company:'Lao - Viet Bank',
-        date:'Oc - 2024'
+        date:'Now'
     },
 ])
 </script>
