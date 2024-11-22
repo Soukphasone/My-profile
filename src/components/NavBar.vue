@@ -15,16 +15,16 @@
         </select>
       </div> -->
       <div class="custom-select">
-        <button v-if="check == 'la'" @click="toggleDropdown">
-          <img src="@/assets/laos-flag.png" alt="flag" class="flag-icon" />
-          {{ $t("languages") }}
-        </button>
-        <button v-else @click="toggleDropdown">
-          <img
-            src="@/assets/united-states-flag-icon.png"
-            alt="flag"
-            class="flag-icon"
-          />
+        <button @click="toggleDropdown">
+          <span v-if="check === 'la'">
+            <img src="@/assets/laos-flag.png" alt="flag" class="flag-icon"
+          /></span>
+          <span v-else>
+            <img
+              src="@/assets/united-states-flag-icon.png"
+              alt="flag"
+              class="flag-icon"
+          /></span>
           {{ $t("languages") }}
         </button>
         <ul v-if="isOpen" class="dropdown">
@@ -33,6 +33,11 @@
             :key="option"
             @click="selectOption(option)"
           >
+            <img
+              :src="`/src/assets/${option.img}`"
+              alt="flag"
+              class="flag-icon"
+            />
             {{ option.language }}
           </li>
         </ul>
@@ -131,12 +136,12 @@ const options = ref([
   {
     value: "en",
     language: "EN(ອັງກິດ)",
-    img: "@/assets/laos-flag.png",
+    img: "united-states-flag-icon.png",
   },
   {
     value: "la",
     language: "ລາວ(LA)",
-    img: "@/assets/laos-flag.png",
+    img: "laos-flag.png",
   },
 ]);
 
@@ -145,12 +150,12 @@ const toggleDropdown = () => {
 };
 
 const selectOption = (option) => {
+  console.log("img:", option.img);
   selected.value = option.value;
   currentLanguage.value = option.value;
   isOpen.value = false;
   localStorage.setItem("language", currentLanguage.value);
 };
-
 </script>
 <style>
 .custom-select {
@@ -177,9 +182,10 @@ const selectOption = (option) => {
   width: 100%;
 }
 .dropdown li {
-  padding: 10px;
+  padding: 0 5px;
   cursor: pointer;
   font-size: 15px;
+  display: flex;
 }
 .dropdown li:hover {
   background: #eee;
