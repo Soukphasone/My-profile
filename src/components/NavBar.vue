@@ -33,11 +33,13 @@
             :key="option"
             @click="selectOption(option)"
           >
-            <img
+            <!-- <img
               :src="`/src/assets/${option.img}`"
               alt="flag"
               class="flag-icon"
-            />
+            /> -->
+            <img :src="getImagePath(option.img)" alt="flag" class="flag-icon" />
+
             {{ option.language }}
           </li>
         </ul>
@@ -155,6 +157,9 @@ const selectOption = (option) => {
   currentLanguage.value = option.value;
   isOpen.value = false;
   localStorage.setItem("language", currentLanguage.value);
+};
+const getImagePath = (img) => {
+  return new URL(`/src/assets/${img}`, import.meta.url).href;
 };
 </script>
 <style>
