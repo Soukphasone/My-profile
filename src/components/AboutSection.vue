@@ -10,7 +10,7 @@
     >
       <div data-aos="flip-right">
         <h2 class="font-lao text-4xl font-bold text-white text-left mb-8">
-          ການສຶກສາ
+          {{ $t("education") }}
         </h2>
         <div class="space-y-8 py-8">
           <div
@@ -24,13 +24,22 @@
                 alt="graduation-cap--v1"
               />
             </div>
-            <div class="w-3/4 pl-4 font-lao">
+            <div v-if="check === 'la'" class="w-3/4 pl-4 font-lao">
               <h3
                 class="text-2xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:text-xl"
               >
                 {{ element.School }}
               </h3>
               <p class="text-white">{{ element.program }}</p>
+              <p class="text-white">{{ element.year }}</p>
+            </div>
+            <div v-else class="w-3/4 pl-4 font-lao">
+              <h3
+                class="text-2xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:text-xl"
+              >
+                {{ element.School_en }}
+              </h3>
+              <p class="text-white">{{ element.program_en }}</p>
               <p class="text-white">{{ element.year }}</p>
             </div>
           </div>
@@ -41,17 +50,16 @@
         data-aos="flip-right"
       >
         <h2 class="text-4xl font-bold text-white md:text-center text-left mb-4">
-          ເພີ່ມເຕີມ
+          {{ $t("more") }}
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
-            >ກ່ຽວກັບ</span
           >
-          ຂ້ອຍ
+            {{ $t("about") }}</span
+          >
+          {{ $t("me") }}
         </h2>
         <p class="font-lao text-base lg:text-lg mt-8 py-8">
-          ສະບາຍດີ ຂ້າພະເຈົ້າ ທ.ສຸກພະສອນ ດວງປັນຍາ. ອາຍຸ 24 ປິ, ຮັບພັດທະນາ
-          program, website-application ຕ່າງໆ. ປັດຈຸບັນ ເຮັດວຽກຢູ່
-          ທະນາຄານຮ່ວມທຸລະກິດ ລາວ-ຫວຽດ (Lao-Viet Bank) ທີ່ ສຳນັກງານໃຫຍ່ ນະຄອນຫຼວງວຽງຈັນ.
+          {{ $t("introduce") }}
         </p>
         <!-- <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
                     <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641] p-3">
@@ -73,12 +81,15 @@
   </section>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { currentLanguage } from "../i18n";
 const education = ref([
   {
     id: 1,
     School: "ຈົບການສຶກສາຈາກ ມະຫາວິທະຍາໄລ ຮ່າຕິ່ງ ສສ ຫວຽດນາມ",
     program: "ສາຂາ ເຕັກໂນໂລຊີຂໍ້ມູນຂ່າວສານ",
+    School_en: "hatinh university in vietnam",
+    program_en: "Software Engineer",
     year: "2024",
   },
   // {
@@ -88,4 +99,8 @@ const education = ref([
   //     year:'2020'
   // }
 ]);
+const check = ref(currentLanguage.value);
+watch(currentLanguage, (newLanguage) => {
+  check.value = newLanguage;
+});
 </script>

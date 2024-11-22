@@ -3,19 +3,40 @@
     class="flex justify-between items-center p-6 bg-opacity-50 relative z-20"
   >
     <div class="font-lao text-3xl font-bold">
-      <div class="p-4 max-w-sm mx-auto">
-          <select
-            id="language"
-            v-model="currentLanguage"
-            @change="changeLanguage"
-            class="border rounded p-2 text-sm"
+      <!-- <div class="p-4 max-w-sm mx-auto">
+        <select
+          id="language"
+          v-model="currentLanguage"
+          @change="changeLanguage"
+          class="border rounded p-2 text-sm"
+        >
+          <option value="en" class="flex items-center">EN</option>
+          <option value="la" class="flex items-center">LA</option>
+        </select>
+      </div> -->
+      <div class="custom-select">
+        <button v-if="check == 'la'" @click="toggleDropdown">
+          <img src="@/assets/laos-flag.png" alt="flag" class="flag-icon" />
+          {{ $t("languages") }}
+        </button>
+        <button v-else @click="toggleDropdown">
+          <img
+            src="@/assets/united-states-flag-icon.png"
+            alt="flag"
+            class="flag-icon"
+          />
+          {{ $t("languages") }}
+        </button>
+        <ul v-if="isOpen" class="dropdown">
+          <li
+            v-for="option in options"
+            :key="option"
+            @click="selectOption(option)"
           >
-            <option value="en" class="flex items-center">EN</option>
-            <option value="la" class="flex items-center">LA</option>
-          </select>
+            {{ option.language }}
+          </li>
+        </ul>
       </div>
-
-      <!-- <img src="@/assets/laos-flag.png" alt="LOGO" class="inline-block w-15 h-10" /> -->
     </div>
 
     <!-- Mobile Toggle Button -->
@@ -53,7 +74,7 @@
       <ul
         class="flex flex-col items-center space-y-5 md:flex-row md:space-x-5 md:space-y-0"
       >
-        <li v-for="item in Menu" :key="item.name">
+        <li v-for="item in check === 'en' ? Menu_en : Menu" :key="item.name">
           <a
             :href="item.href"
             class="font-lao block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
@@ -76,9 +97,16 @@ const Menu = ref([
   { name: "ທັກສະ", href: "#skills" },
   // { name: "Projects", href: "#projects" },
   // { name: "Testimonials", href: "#testimonials" },
-  { name: "ຕິດຕໍ່", href: "#contact" },
+  { name: "ຊ່ອງທາງຕິດຕໍ່", href: "#contact" },
 ]);
-
+const Menu_en = ref([
+  // { name: "Services", href: "#services" },
+  { name: "About Me", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  // { name: "Projects", href: "#projects" },
+  // { name: "Testimonials", href: "#testimonials" },
+  { name: "Contact", href: "#contact" },
+]);
 const isMenuOpen = ref(false);
 const scrollToSection = (href) => {
   isMenuOpen.value = false;
@@ -89,14 +117,76 @@ const scrollToSection = (href) => {
 };
 // Handle language switching
 const { locale } = useI18n();
-
+const check = ref(currentLanguage.value);
 // Watch for changes in the global language state and update the i18n locale
 watch(currentLanguage, (newLanguage) => {
   locale.value = newLanguage;
+  check.value = newLanguage;
 });
 
-// Function to persist the selected language in localStorage
-const changeLanguage = () => {
+// Dropdown functionality
+const isOpen = ref(false);
+const selected = ref(currentLanguage.value);
+const options = ref([
+  {
+    value: "en",
+    language: "EN(ອັງກິດ)",
+    img: "@/assets/laos-flag.png",
+  },
+  {
+    value: "la",
+    language: "ລາວ(LA)",
+    img: "@/assets/laos-flag.png",
+  },
+]);
+
+const toggleDropdown = () => {
+  isOpen.value = !isOpen.value;
+};
+
+const selectOption = (option) => {
+  selected.value = option.value;
+  currentLanguage.value = option.value;
+  isOpen.value = false;
   localStorage.setItem("language", currentLanguage.value);
 };
+
 </script>
+<style>
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+.custom-select button {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.dropdown li:hover {
+  background: #eee;
+}
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  margin: 10px 10px 0 0;
+}
+</style>

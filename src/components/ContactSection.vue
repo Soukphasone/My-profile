@@ -1,35 +1,72 @@
 <template>
-    <section class="text-white mt-20" id="contact">
-        <h2 class="font-lao text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16">ຊ່ອງທາງຕິດຕໍ່</h2>
-        <div class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8" data-aos="zoom-in-up">
-            <div>
-                <p class="text-[#adb7be]">
-                    
-                </p>
-                <div class="col-lg-4 col-md-4 mb-lg-0 mt-5">
-                    <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/metro/50/ffffff/new-post.png" alt="new-post" class="w-6">
-                        </div>
-                        <div class="font-lao ml-5 text-white">
-                            <h4>ອີເມວ</h4>
-                            <p>soukphasone2001@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="phone" class="w-6">
-                        </div>
-                        <div class="font-lao ml-5 text-white">
-                            <h4>ເບີໂທ</h4>
-                            <p>+856 20 99110019</p>
-                        </div>
-                    </div>
-                    <!-- <div class="flex mb-10 items-center">
+  <section class="text-white mt-20" id="contact">
+    <h2
+      class="font-lao text-4xl font-bold text-white text-left mb-4 px-4 xl:pl-16"
+    >
+      {{ $t("contact") }}
+    </h2>
+    <div
+      class="grid md:grid-cols-2 gap-4 relative px-4 xl:px-16 mt-8"
+      data-aos="zoom-in-up"
+    >
+      <div>
+        <p class="text-[#adb7be]"></p>
+        <div class="col-lg-4 col-md-4 mb-lg-0 mt-5">
+          <div class="flex mb-10 items-center">
+            <div
+              class="p-2"
+              style="
+                background: #111a3e;
+                width: 50px;
+                height: 46px;
+                display: flex;
+                justify-content: center;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 1px solid#111a3e;
+                backdrop-filter: blur(9px);
+                -webkit-backdrop-filter: blur(9px);
+              "
+            >
+              <img
+                src="https://img.icons8.com/metro/50/ffffff/new-post.png"
+                alt="new-post"
+                class="w-6"
+              />
+            </div>
+            <div class="font-lao ml-5 text-white">
+              <h4>{{ $t("email") }}</h4>
+              <p>soukphasone2001@gmail.com</p>
+            </div>
+          </div>
+          <div class="flex mb-10 items-center">
+            <div
+              class="p-2"
+              style="
+                background: #111a3e;
+                width: 50px;
+                height: 46px;
+                display: flex;
+                justify-content: center;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 1px solid#111a3e;
+                backdrop-filter: blur(9px);
+                -webkit-backdrop-filter: blur(9px);
+              "
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/50/ffffff/phone.png"
+                alt="phone"
+                class="w-6"
+              />
+            </div>
+            <div class="font-lao ml-5 text-white">
+              <h4>{{ $t("phone") }}</h4>
+              <p>+856 20 99110019</p>
+            </div>
+          </div>
+          <!-- <div class="flex mb-10 items-center">
                         <div class="p-2"
                             style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
                         overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
@@ -41,38 +78,106 @@
                             <p>wwww.LinkedIn.com</p>
                         </div>
                     </div> -->
-                </div>
-            </div>
-            <div
-            style="background: #111a3e; width: 100%;height: 100%; border-radius: 20px;
-            overflow: hidden;border: 1px solid #111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-            <form class="font-lao sflex flex-col p-2" data-aos="zoom-in-up" >
-                <div class="mb-6">
-                    <label for="email" class="text-white block mb-2 text-sm font-medium">ອີເມວ</label>
-                    <input type="email" id="email" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="ຕົວຢ່າງ email@gmail.com" name="email">
-                </div>
-                <div class="mb-6">
-                    <label for="subject" class="text-white block mb-2 text-sm font-medium">ເລື່ອງ</label>
-                    <input type="subject" id="subject" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="ຊື່ເລື່ອງ" name="subject">
-                </div>
-                <div class="mb-6">
-                    <label for="message" class="text-white block mb-2 text-sm font-medium">ລາຍລະອຽດ</label>
-                    <textarea id="Message" class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                    placeholder="ເນື້ອໃນລາຍລະອຽດຕ່າງໆ..." name="Message"></textarea>
-                </div>
-                <button class="z-1 w-[100%!important] px-6 md:px-7 py-3 rounded-full sm:w-max flex justify-center text-white bg-primary border-2 border-transparent">
-                    ສົ່ງ
-                </button>
-            </form>
         </div>
-        <div class="bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl h-20 w-80 z-0 absolute -top-1/2 -left-4 transform -translate-x-2/3 
-        -translate-1/2
-        "></div>
-        </div>
-    </section>
+      </div>
+      <div
+        style="
+          background: #111a3e;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          overflow: hidden;
+          border: 1px solid #111a3e;
+          backdrop-filter: blur(9px);
+          -webkit-backdrop-filter: blur(9px);
+        "
+      >
+        <form class="font-lao sflex flex-col p-2" data-aos="zoom-in-up">
+          <div class="mb-6">
+            <label
+              for="email"
+              class="text-white block mb-2 text-sm font-medium"
+              >{{ $t("email") }}</label
+            >
+            <input
+              v-if="check === 'la'"
+              type="email"
+              id="email"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="ຕົວຢ່າງ email@gmail.com"
+              name="email"
+            />
+            <input
+              v-else
+              type="email"
+              id="email"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="email@gmail.com"
+              name="email"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="subject"
+              class="text-white block mb-2 text-sm font-medium"
+              >{{ $t("subject") }}</label
+            >
+            <input
+              v-if="check == 'la'"
+              type="subject"
+              id="subject"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="ຊື່ເລື່ອງ"
+              name="subject"
+            />
+            <input
+              v-else
+              type="subject"
+              id="subject"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="subject"
+              name="subject"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="message"
+              class="text-white block mb-2 text-sm font-medium"
+              >{{ $t("detail") }}</label
+            >
+            <textarea
+              v-if="check == 'la'"
+              id="Message"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="ເນື້ອໃນລາຍລະອຽດຕ່າງໆ..."
+              name="Message"
+            ></textarea>
+            <textarea
+              v-else
+              id="Message"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Let's talk about ..."
+              name="Message"
+            ></textarea>
+          </div>
+          <button
+            class="z-1 w-[100%!important] px-6 md:px-7 py-3 rounded-full sm:w-max flex justify-center text-white bg-primary border-2 border-transparent"
+          >
+            {{ $t("send") }}
+          </button>
+        </form>
+      </div>
+      <div
+        class="bg-gradient-to-tr opacity-25 from-[#570cac] to-primary blur-2xl h-20 w-80 z-0 absolute -top-1/2 -left-4 transform -translate-x-2/3 -translate-1/2"
+      ></div>
+    </div>
+  </section>
 </template>
-<script>
-
+<script setup>
+import { ref, watch } from "vue";
+import { currentLanguage } from "../i18n";
+const check = ref(currentLanguage.value);
+watch(currentLanguage, (newLanguage) => {
+  check.value = newLanguage;
+});
 </script>
