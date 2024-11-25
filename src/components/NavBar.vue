@@ -30,14 +30,9 @@
         <ul v-if="isOpen" class="dropdown">
           <li
             v-for="option in options"
-            :key="option"
-            @click="selectOption(option)"
+            :key="option.value"
+            @click="selectOption(option.value)"
           >
-            <!-- <img
-              :src="`/src/assets/${option.img}`"
-              alt="flag"
-              class="flag-icon"
-            /> -->
             <img :src="getImagePath(option.img)" alt="flag" class="flag-icon" />
 
             {{ option.language }}
@@ -152,11 +147,10 @@ const toggleDropdown = () => {
 };
 
 const selectOption = (option) => {
-  console.log("img:", option.img);
-  selected.value = option.value;
-  currentLanguage.value = option.value;
+  selected.value = option;
+  currentLanguage.value = option;
   isOpen.value = false;
-  localStorage.setItem("language", currentLanguage.value);
+  localStorage.setItem("language", option);
 };
 const getImagePath = (img) => {
   return new URL(`/src/assets/${img}`, import.meta.url).href;
@@ -170,7 +164,7 @@ const getImagePath = (img) => {
 .custom-select button {
   background: #f0f0f0;
   border: 1px solid #ccc;
-  padding: 5px 10px;
+  padding: 0 10px;
   cursor: pointer;
   display: flex;
   font-size: 15px;
@@ -187,7 +181,7 @@ const getImagePath = (img) => {
   width: 100%;
 }
 .dropdown li {
-  padding: 0 5px;
+  padding: 5px 5px 0 5px;
   cursor: pointer;
   font-size: 15px;
   display: flex;
