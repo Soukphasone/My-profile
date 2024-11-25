@@ -1,5 +1,5 @@
 export const en = {
-  languages: "English",
+  languages: "Language",
   hello: "Hello, i'm",
   education: " My Education",
   more: "More",
@@ -15,7 +15,6 @@ export const en = {
   phone: "phone",
   subject:"subject",
   detail:"Message",
-  details:"Let's talk about ...",
   send:" Send Message",
   my:'My'
 };

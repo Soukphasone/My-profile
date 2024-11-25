@@ -19,9 +19,15 @@
           <span v-if="check === 'la'">
             <img src="@/assets/laos-flag.png" alt="flag" class="flag-icon"
           /></span>
-          <span v-else>
+          <span v-else-if="check === 'en'">
             <img
               src="@/assets/united-states-flag-icon.png"
+              alt="flag"
+              class="flag-icon"
+          /></span>
+          <span v-else>
+            <img
+              src="@/assets/vietnam-flag.png"
               alt="flag"
               class="flag-icon"
           /></span>
@@ -76,7 +82,7 @@
       <ul
         class="flex flex-col items-center space-y-5 md:flex-row md:space-x-5 md:space-y-0"
       >
-        <li v-for="item in check === 'en' ? Menu_en : Menu" :key="item.name">
+        <li v-for="item in (check === 'en' ? Menu_en : check === 'vn' ? Menu_vn : Menu)" :key="item.name">
           <a
             :href="item.href"
             class="font-lao block text-white transition hover:text-primary ease-linear text-2xl md:text-lg"
@@ -109,6 +115,14 @@ const Menu_en = ref([
   // { name: "Testimonials", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ]);
+const Menu_vn = ref([
+  // { name: "Services", href: "#services" },
+  { name: "Giới thiệu", href: "#about" },
+  { name: "Kỹ năng", href: "#skills" },
+  // { name: "Projects", href: "#projects" },
+  // { name: "Testimonials", href: "#testimonials" },
+  { name: "Liên hệ", href: "#contact" },
+]);
 const isMenuOpen = ref(false);
 const scrollToSection = (href) => {
   isMenuOpen.value = false;
@@ -132,13 +146,19 @@ const selected = ref(currentLanguage.value);
 const options = ref([
   {
     value: "en",
-    language: "EN(ອັງກິດ)",
+    language: "US (EN)",
     img: "united-states-flag-icon.png",
   },
   {
     value: "la",
-    language: "ລາວ(LA)",
+
+    language: "ລາວ (LA)",
     img: "laos-flag.png",
+  },
+  {
+    value: "vn",
+    language: "Tiếng việt (VN)",
+    img: "vietnam-flag.png",
   },
 ]);
 
@@ -168,6 +188,8 @@ const getImagePath = (img) => {
   cursor: pointer;
   display: flex;
   font-size: 15px;
+  width: 130px;
+
 }
 .dropdown {
   position: absolute;
@@ -176,14 +198,15 @@ const getImagePath = (img) => {
   background: #fff;
   border: 1px solid #ccc;
   list-style: none;
-  padding: 0;
+  padding: 0 10px 0 0;
   margin: 0;
   width: 100%;
+
 }
 .dropdown li {
   padding: 5px 5px 0 5px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 10px;
   display: flex;
 }
 .dropdown li:hover {

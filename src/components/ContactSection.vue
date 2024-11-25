@@ -108,11 +108,19 @@
               name="email"
             />
             <input
-              v-else
+              v-else-if="check === 'en'"
               type="email"
               id="email"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="email@gmail.com"
+              name="email"
+            />
+            <input
+              v-else
+              type="email"
+              id="email"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Ví dụ email@gmail.com"
               name="email"
             />
           </div>
@@ -123,7 +131,7 @@
               >{{ $t("subject") }}</label
             >
             <input
-              v-if="check == 'la'"
+              v-if="check === 'la'"
               type="subject"
               id="subject"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
@@ -131,11 +139,19 @@
               name="subject"
             />
             <input
-              v-else
+              v-else-if="check==='en'"
               type="subject"
               id="subject"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="subject"
+              name="subject"
+            />
+            <input
+              v-else
+              type="subject"
+              id="subject"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="chủ đề"
               name="subject"
             />
           </div>
@@ -153,10 +169,17 @@
               name="Message"
             ></textarea>
             <textarea
-              v-else
+              v-else-if="check==='en'"
               id="Message"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Let's talk about ..."
+              name="Message"
+            ></textarea>
+            <textarea
+              v-else
+              id="Message"
+              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              placeholder="Nội dung ..."
               name="Message"
             ></textarea>
           </div>

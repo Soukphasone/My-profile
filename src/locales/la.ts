@@ -1,5 +1,5 @@
 export const la = {
-  languages: "ພາສາລາວ",
+  languages: "ພາສາ",
   hello: " ສະບາຍດີ ຂ້ອຍ",
   education: "ການສຶກສາ",
   more: "ແນະນຳ",
@@ -15,7 +15,6 @@ export const la = {
   phone: "ເບີໂທ",
   subject:"ເລື່ອງ",
   detail:"ລາຍລະອຽດ",
-  details:"ເນື້ອໃນລາຍລະອຽດຕ່າງໆ...",
   send:"ສົ່ງ",
    my:''
 

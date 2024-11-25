@@ -1,6 +1,7 @@
 import { createI18n } from 'vue-i18n';
 import { en } from './locales/en';
 import { la } from './locales/la';
+import { vn } from './locales/vn';
 import { ref } from 'vue';
 
 // Manage language state with ref and localStorage
@@ -14,6 +15,7 @@ if (localStorage.getItem('language')) {
 const messages = {
   en,
   la,
+  vn,
 };
 
 // Create i18n instance

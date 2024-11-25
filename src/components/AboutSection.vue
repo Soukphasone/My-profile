@@ -33,13 +33,22 @@
               <p class="text-white">{{ element.program }}</p>
               <p class="text-white">{{ element.year }}</p>
             </div>
-            <div v-else class="w-3/4 pl-4 font-lao">
+            <div v-else-if="check=== 'en'" class="w-3/4 pl-4 font-lao">
               <h3
                 class="text-2xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:text-xl"
               >
                 {{ element.School_en }}
               </h3>
               <p class="text-white">{{ element.program_en }}</p>
+              <p class="text-white">{{ element.year }}</p>
+            </div>
+            <div v-else class="w-3/4 pl-4 font-lao">
+              <h3
+                class="text-2xl font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary lg:text-xl"
+              >
+                {{ element.School_vn }}
+              </h3>
+              <p class="text-white">{{ element.program_vn }}</p>
               <p class="text-white">{{ element.year }}</p>
             </div>
           </div>
@@ -90,6 +99,8 @@ const education = ref([
     program: "ສາຂາ ເຕັກໂນໂລຊີຂໍ້ມູນຂ່າວສານ",
     School_en: "hatinh university in vietnam",
     program_en: "Software Engineer",
+    School_vn: "Trường đại học hà tĩnh",
+    program_vn: "Công nghệ thông tin",
     year: "2024",
   },
   // {
