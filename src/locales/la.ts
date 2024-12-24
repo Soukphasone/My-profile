@@ -1,5 +1,6 @@
 export const la = {
   languages: "ພາສາ",
+  lg:"LA",
   hello: " ສະບາຍດີ ຂ້ອຍ",
   education: "ການສຶກສາ",
   more: "ແນະນຳ",
@@ -13,9 +14,9 @@ export const la = {
   experiences: "ປະສົບການເຮັດວຽກ",
   email: "ອີເມວ",
   phone: "ເບີໂທ",
-  subject:"ເລື່ອງ",
-  detail:"ລາຍລະອຽດ",
-  send:"ສົ່ງ",
-   my:''
-
+  subject: "ເລື່ອງ",
+  detail: "ລາຍລະອຽດ",
+  send: "ສົ່ງ",
+  my: "",
+  email_ex:"ຕົວຢ່າງ email@gmail.com"
 };

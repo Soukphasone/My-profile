@@ -100,27 +100,9 @@
               >{{ $t("email") }}</label
             >
             <input
-              v-if="check === 'la'"
-              type="email"
               id="email"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="ຕົວຢ່າງ email@gmail.com"
-              name="email"
-            />
-            <input
-              v-else-if="check === 'en'"
-              type="email"
-              id="email"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="email@gmail.com"
-              name="email"
-            />
-            <input
-              v-else
-              type="email"
-              id="email"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Ví dụ email@gmail.com"
+              :placeholder="$t('email_ex')"
               name="email"
             />
           </div>
@@ -131,27 +113,10 @@
               >{{ $t("subject") }}</label
             >
             <input
-              v-if="check === 'la'"
               type="subject"
               id="subject"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="ຊື່ເລື່ອງ"
-              name="subject"
-            />
-            <input
-              v-else-if="check==='en'"
-              type="subject"
-              id="subject"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="subject"
-              name="subject"
-            />
-            <input
-              v-else
-              type="subject"
-              id="subject"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="chủ đề"
+              :placeholder="$t('subject')"
               name="subject"
             />
           </div>
@@ -162,24 +127,9 @@
               >{{ $t("detail") }}</label
             >
             <textarea
-              v-if="check == 'la'"
               id="Message"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="ເນື້ອໃນລາຍລະອຽດຕ່າງໆ..."
-              name="Message"
-            ></textarea>
-            <textarea
-              v-else-if="check==='en'"
-              id="Message"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Let's talk about ..."
-              name="Message"
-            ></textarea>
-            <textarea
-              v-else
-              id="Message"
-              class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Nội dung ..."
+              :placeholder="$t('detail') + '...'"
               name="Message"
             ></textarea>
           </div>

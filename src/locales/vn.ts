@@ -1,5 +1,6 @@
 export const vn = {
   languages: "Ngôn ngữ",
+  lg:"VN",
   hello: " Xin chào tôi là",
   education: "Việc giáo dục",
   more: "Giới thiệu",
@@ -13,9 +14,9 @@ export const vn = {
   experiences: "Kinh nghiệm làm việc",
   email: "Địa chị email",
   phone: "Số điện thoại",
-  subject:"Chủ đề",
-  detail:"Chi tiết",
-  send:"Gửi",
-   my:''
-
+  subject: "Chủ đề",
+  detail: "Chi tiết",
+  send: "Gửi",
+  my: "",
+  email_ex:"Ví dụ email@gmail.com"
 };
