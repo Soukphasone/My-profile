@@ -1,6 +1,6 @@
 export const en = {
   languages: "Language",
-  lg:"EN",
+  lg: "EN",
   hello: "Hello, i'm",
   education: " My Education",
   more: "More",
@@ -18,5 +18,5 @@ export const en = {
   detail: "Message",
   send: " Send Message",
   my: "My",
-  email_ex:"Email@gmail.com",
+  email_ex: "Email@gmail.com",
 };

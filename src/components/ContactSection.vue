@@ -66,18 +66,6 @@
               <p>+856 20 99110019</p>
             </div>
           </div>
-          <!-- <div class="flex mb-10 items-center">
-                        <div class="p-2"
-                            style="background: #111a3e; width: 50px;height: 46px; display: flex;justify-content: center; border-radius: 50%;
-                        overflow: hidden;border: 1px solid#111a3e;backdrop-filter: blur(9px);-webkit-backdrop-filter: blur(9px);">
-                            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="linkedin"
-                                class="w-6">
-                        </div>
-                        <div class="ml-5 text-white">
-                            <h4>LinkedIn</h4>
-                            <p>wwww.LinkedIn.com</p>
-                        </div>
-                    </div> -->
         </div>
       </div>
       <div
@@ -100,10 +88,10 @@
               >{{ $t("email") }}</label
             >
             <input
+              type="email"
               id="email"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              :placeholder="$t('email_ex')"
-              name="email"
+              placeholder="Email@gmail.com"
             />
           </div>
           <div class="mb-6">
@@ -113,7 +101,7 @@
               >{{ $t("subject") }}</label
             >
             <input
-              type="subject"
+              type="text"
               id="subject"
               class="bg-[#111827] placeholder:[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               :placeholder="$t('subject')"
