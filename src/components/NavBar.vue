@@ -38,7 +38,7 @@
             </li>
           </ul>
         </div>
-        <div class="text-white text-lg mt-1">{{ $t("lg") }}</div>
+        <div class="text-white text-sm mt-2">{{ $t("lg") }}</div>
       </div>
     </div>
     <!-- Mobile Toggle Button -->
@@ -208,14 +208,14 @@ const getImagePath = (img) => {
   /* padding: 5px 10px 5px 5px; */
   margin: 5px 0 0 0;
   width: 70px;
-  color: black;
+  color: #000;
   z-index: 100;
 }
 
 .dropdown-mb li {
   padding: 10px 7px 0px 7px;
   /* cursor: pointer; */
-  font-size: 15px;
+  font-size: 13px;
   display: flex;
   gap: 10px;
 
